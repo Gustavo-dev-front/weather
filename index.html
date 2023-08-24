@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima / Weather</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1>Dashboard de Clima</h1>
+  </header>
+
+  <div class="dash-container">
+    <nav>
+      <div class="input-box">
+        <label for="city-input">Informe o nome da cidade</label>
+        <input type="text" id="city-input" placeholder="Ex: São Paulo, Rio de Janeiro, London ...">
+      </div>
+      <button class="search-btn">Procurar</button>
+      <button class="location-btn">Usar localização atual</button>
+    </nav>
+
+    <main>
+      <div class="current-location">
+        <div class="general-info">
+          <p class="city-and-date">São Paulo <span>(2023-08-25)</span></p>
+          <p class="weather-info temparature">Temperatura: <span>24.22°C</span></p>
+          <p class="weather-info wind">Vento: <span>4.22 M/S</span></p>
+          <p class="weather-info humidity">Umidade: <span>60%</span></p>
+        </div>
+        <img src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-image">
+      </div>
+
+      <ul class="day-forecast">
+        <li class="card">
+          <p class="city-and-date">São Paulo <span>(2023-08-25)</span></p>
+          <img src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-image">
+          <p class="weather-info temparature">Temperatura: <span>24.22°C</span></p>
+          <p class="weather-info wind">Vento: <span>4.22 M/S</span></p>
+          <p class="weather-info humidity">Umidade: <span>60%</span></p>
+        </li>
+
+        <li class="card">
+          <p class="city-and-date">São Paulo <span>(2023-08-25)</span></p>
+          <img src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-image">
+          <p class="weather-info temparature">Temperatura: <span>24.22°C</span></p>
+          <p class="weather-info wind">Vento: <span>4.22 M/S</span></p>
+          <p class="weather-info humidity">Umidade: <span>60%</span></p>
+        </li>
+
+        <li class="card">
+          <p class="city-and-date">São Paulo <span>(2023-08-25)</span></p>
+          <img src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-image">
+          <p class="weather-info temparature">Temperatura: <span>24.22°C</span></p>
+          <p class="weather-info wind">Vento: <span>4.22 M/S</span></p>
+          <p class="weather-info humidity">Umidade: <span>60%</span></p>
+        </li>
+
+        <li class="card">
+          <p class="city-and-date">São Paulo <span>(2023-08-25)</span></p>
+          <img src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-image">
+          <p class="weather-info temparature">Temperatura: <span>24.22°C</span></p>
+          <p class="weather-info wind">Vento: <span>4.22 M/S</span></p>
+          <p class="weather-info humidity">Umidade: <span>60%</span></p>
+        </li>
+
+        <li class="card">
+          <p class="city-and-date">São Paulo <span>(2023-08-25)</span></p>
+          <img src="https://openweathermap.org/img/wn//10d@4x.png" alt="weather-image">
+          <p class="weather-info temparature">Temperatura: <span>24.22°C</span></p>
+          <p class="weather-info wind">Vento: <span>4.22 M/S</span></p>
+          <p class="weather-info humidity">Umidade: <span>60%</span></p>
+        </li>
+      </ul>
+    </main>
+  </div>
+
+</body>
+
+</html>
