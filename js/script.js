@@ -3,8 +3,6 @@ const SEARCH_BTN = document.querySelector(".search-btn");
 const API_KEY = `e6e698a4930e5466790effba84db0728`;
 const FORECAST_LIST = document.querySelector(".day-forecast .list");
 
-console.log(FORECAST_LIST);
-
 function createForecastCard(object) {
   const date = object.dt_txt.split(" ")[0];
   const icon = object.weather[0].icon;
@@ -30,7 +28,6 @@ async function getWeatherDetails(coordinates) {
 
   try {
     const data = await (await fetch(WEATHER_API_URL)).json();
-    console.log(data);
     const forecastArray = data.list.filter((weatherObj) => {
       const date = weatherObj.dt_txt.split(" ")[0];
       if (!uniqueDayForecast.includes(date)) {
@@ -39,7 +36,6 @@ async function getWeatherDetails(coordinates) {
         return weatherObj;
       }
     });
-    console.log(forecastArray);
   } catch (error) {
     alert("Um erro ocorreu ao requisitar o clima.");
   }
@@ -47,6 +43,7 @@ async function getWeatherDetails(coordinates) {
 
 async function getCityCoordinates() {
   const cityName = INPUT.value.trim();
+  INPUT.value = "";
   if (!cityName) return;
 
   const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
@@ -64,3 +61,6 @@ async function getCityCoordinates() {
 }
 
 SEARCH_BTN.addEventListener("click", getCityCoordinates);
+INPUT.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") getCityCoordinates();
+});
